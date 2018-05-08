@@ -4,12 +4,14 @@ function(_add_boost_lib)
   set(multiValueArgs SOURCES LINK DEFINE DEFINE_PRIVATE CXXFLAGS_PRIVATE INCLUDE_PRIVATE)
   cmake_parse_arguments(BOOSTLIB "${options}" "${oneValueArgs}"
                         "${multiValueArgs}" ${ARGN})
-  add_library(Boost_${BOOSTLIB_NAME} STATIC ${BOOSTLIB_SOURCES})
+  set(CMAKE_INSTALL_RPATH "@loader_path")
+  add_library(Boost_${BOOSTLIB_NAME} SHARED ${BOOSTLIB_SOURCES})
   add_library(Boost::${BOOSTLIB_NAME} ALIAS Boost_${BOOSTLIB_NAME})
   set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES
     OUTPUT_NAME "boost_${BOOSTLIB_NAME}"
     FOLDER "Boost"
   )
+
   if(NOT BOOST_STANDALONE)
     set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES EXCLUDE_FROM_ALL 1)
   endif()

@@ -30,3 +30,5 @@ _add_boost_test(
     RUN ${BOOST_SOURCE}/libs/program_options/test/unrecognized_test.cpp
     RUN ${BOOST_SOURCE}/libs/program_options/test/exception_txt_test.cpp
 )
+install(TARGETS Boost_program_options DESTINATION lib)
+

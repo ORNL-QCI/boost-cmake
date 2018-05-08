@@ -19,3 +19,4 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/regex/src/winstances.cpp
     ${BOOST_SOURCE}/libs/regex/src/usinstances.cpp
 )
+install(TARGETS Boost_regex DESTINATION lib)

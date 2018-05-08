@@ -17,3 +17,4 @@ _add_boost_test(
     RUN ${BOOST_SOURCE}/libs/system/test/header_only_test.cpp
     RUN ${BOOST_SOURCE}/libs/system/test/config_test.cpp
 )
+install(TARGETS Boost_system DESTINATION lib)

@@ -5,3 +5,4 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/graph/src/read_graphviz_new.cpp
   LINK Boost::regex
 )
+install(TARGETS Boost_graph DESTINATION lib)
