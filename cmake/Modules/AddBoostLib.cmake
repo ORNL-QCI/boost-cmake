@@ -4,7 +4,11 @@ function(_add_boost_lib)
   set(multiValueArgs SOURCES LINK DEFINE DEFINE_PRIVATE CXXFLAGS_PRIVATE INCLUDE_PRIVATE)
   cmake_parse_arguments(BOOSTLIB "${options}" "${oneValueArgs}"
                         "${multiValueArgs}" ${ARGN})
+  if(APPLE)
   set(CMAKE_INSTALL_RPATH "@loader_path")
+  else()
+  set(CMAKE_INSTALL_RPATH "$ORIGIN")
+  endif()
   add_library(Boost_${BOOSTLIB_NAME} SHARED ${BOOSTLIB_SOURCES})
   add_library(Boost::${BOOSTLIB_NAME} ALIAS Boost_${BOOSTLIB_NAME})
   set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES
