@@ -30,31 +30,8 @@ set(BOOST_LIBS_REQUIRED
   header
 )
 set(BOOST_LIBS_OPTIONAL
-  # Compiled libs
-  atomic
-  chrono
-  container
-  context
-  coroutine
-  date_time
-  exception
-  fiber
-  filesystem
   graph
-  log
-  math
-  graph_parallel # depends on mpi, so needs to be put after it
-  program_options
-  random
   regex
-  serialization
-  signals
-  system
-  test
-  thread
-  timer
-  type_erasure
-  wave
 )
 
 foreach(lib ${BOOST_LIBS_REQUIRED})
