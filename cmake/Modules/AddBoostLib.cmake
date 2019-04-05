@@ -9,7 +9,7 @@ function(_add_boost_lib)
   else()
   set(CMAKE_INSTALL_RPATH "$ORIGIN")
   endif()
-  add_library(Boost_${BOOSTLIB_NAME} SHARED ${BOOSTLIB_SOURCES})
+  add_library(Boost_${BOOSTLIB_NAME} STATIC ${BOOSTLIB_SOURCES})
   add_library(Boost::${BOOSTLIB_NAME} ALIAS Boost_${BOOSTLIB_NAME})
   set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES
     OUTPUT_NAME "boost_${BOOSTLIB_NAME}"
