@@ -32,6 +32,7 @@ set(BOOST_LIBS_REQUIRED
 set(BOOST_LIBS_OPTIONAL
   graph
   regex
+  system
 )
 
 foreach(lib ${BOOST_LIBS_REQUIRED})
