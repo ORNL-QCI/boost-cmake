@@ -7,6 +7,8 @@ endif()
 _add_boost_lib(
   NAME mpi
   SOURCES
+    ${BOOST_SOURCE}/libs/mpi/src/communicator.cpp
+    ${BOOST_SOURCE}/libs/mpi/src/broadcast.cpp
     ${BOOST_SOURCE}/libs/mpi/src/content_oarchive.cpp
     ${BOOST_SOURCE}/libs/mpi/src/environment.cpp
     ${BOOST_SOURCE}/libs/mpi/src/exception.cpp
@@ -30,3 +32,4 @@ _add_boost_lib(
 )
 target_include_directories(Boost_mpi PUBLIC ${MPI_CXX_INCLUDE_PATH})
 target_link_libraries(Boost_mpi PUBLIC ${MPI_CXX_LINK_FLAGS} ${MPI_CXX_LIBRARIES})
+install(TARGETS Boost_mpi DESTINATION lib)
