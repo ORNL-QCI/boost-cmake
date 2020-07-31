@@ -30,9 +30,9 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/serialization/src/basic_text_oprimitive.cpp
     ${BOOST_SOURCE}/libs/serialization/src/basic_xml_archive.cpp
     ${BOOST_SOURCE}/libs/serialization/src/basic_xml_grammar.ipp
-    ${BOOST_SOURCE}/libs/serialization/src/binary_iarchive.cpp
+    #${BOOST_SOURCE}/libs/serialization/src/binary_iarchive.cpp
     ${BOOST_SOURCE}/libs/serialization/src/binary_oarchive.cpp
-    ${BOOST_SOURCE}/libs/serialization/src/binary_wiarchive.cpp
+    #${BOOST_SOURCE}/libs/serialization/src/binary_wiarchive.cpp
     ${BOOST_SOURCE}/libs/serialization/src/binary_woarchive.cpp
     ${BOOST_SOURCE}/libs/serialization/src/codecvt_null.cpp
     ${BOOST_SOURCE}/libs/serialization/src/extended_type_info.cpp

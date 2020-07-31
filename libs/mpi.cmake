@@ -17,6 +17,7 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/mpi/src/intercommunicator.cpp
     ${BOOST_SOURCE}/libs/mpi/src/mpi_datatype_cache.cpp
     ${BOOST_SOURCE}/libs/mpi/src/mpi_datatype_oarchive.cpp
+    ${BOOST_SOURCE}/libs/mpi/src/offsets.cpp
     ${BOOST_SOURCE}/libs/mpi/src/packed_iarchive.cpp
     ${BOOST_SOURCE}/libs/mpi/src/packed_oarchive.cpp
     ${BOOST_SOURCE}/libs/mpi/src/packed_skeleton_iarchive.cpp
