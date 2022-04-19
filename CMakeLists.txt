@@ -34,7 +34,6 @@ set(BOOST_LIBS_OPTIONAL
   regex
   system
   serialization
-  mpi
 )
 
 foreach(lib ${BOOST_LIBS_REQUIRED})
