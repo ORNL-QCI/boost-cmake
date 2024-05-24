@@ -29,12 +29,20 @@ set(BOOST_LIBS_REQUIRED
   # Header only libs
   header
 )
-set(BOOST_LIBS_OPTIONAL
-  graph
-  regex
-  system
-  serialization
-)
+if(XACC_BUILD_ANNEALING)
+  set(BOOST_LIBS_OPTIONAL
+    graph
+    regex
+    system
+    serialization
+  )
+else()
+  set(BOOST_LIBS_OPTIONAL
+    graph
+    regex
+    serialization
+  )
+endif()
 
 foreach(lib ${BOOST_LIBS_REQUIRED})
   include("libs/${lib}.cmake")
