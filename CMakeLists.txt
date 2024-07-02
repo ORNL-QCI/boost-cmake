@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.0.0)
 project(Boost-CMake)
 
 option(BOOST_DOWNLOAD_TO_BINARY_DIR "Prefer downloading Boost to the binary directory instead of source directory" OFF)
-set(BOOST_URL "https://archives.boost.io/release/1.75.0/source/boost_1_75_0.tar.bz2" CACHE STRING "Boost download URL")
-set(BOOST_URL_SHA256 "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb" CACHE STRING "Boost download URL SHA256 checksum")
+set(BOOST_URL "https://archives.boost.io/release/1.85.0/source/boost_1_85_0.tar.bz2" CACHE STRING "Boost download URL")
+set(BOOST_URL_SHA256 "7009fe1faa1697476bdc7027703a2badb84e849b7b0baad5086b087b971f8617" CACHE STRING "Boost download URL SHA256 checksum")
 set(BOOST_ARCHIVE_DIRECTORY "" CACHE DIRECTORY "Use the specified local directory to search for boost archives instead of downloading them" )
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
